@@ -1,0 +1,25 @@
+.header {
+  background-color: #0277bd;
+  color: white;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.logo {
+  width: 2rem;
+  height: 2rem;
+}
+
+.title {
+  text-transform: uppercase;
+  margin-left: 1rem;
+  font-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+}
