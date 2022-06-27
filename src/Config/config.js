@@ -1,3 +1,5 @@
+import { initializeApp } from "@firebase/app";
+
 const firebaseConfig = {
   apiKey: "AIzaSyBGfd1a-BABZroIjmoAGGDydvFF7lRrEgc",
   authDomain: "joke-f9630.firebaseapp.com",
@@ -8,5 +10,4 @@ const firebaseConfig = {
   appId: "1:781652694458:web:2726676141461847b27983",
 };
 
-
-export default firebaseConfig
+export const firebaseApp = initializeApp(firebaseConfig);
