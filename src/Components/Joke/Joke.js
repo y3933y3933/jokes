@@ -3,7 +3,7 @@ import Card from "../Card/Card";
 import Button from "../Button/Button";
 import { firebaseApp as app } from "../../config/config";
 import { get, getDatabase, ref, child } from "firebase/database";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Loading from "../Loading/Loading";
 
 const db = getDatabase(app);
@@ -12,6 +12,7 @@ const dbRef = ref(db);
 const Joke = () => {
   const [joke, setJoke] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+  const cardRef = useRef(null);
 
   useEffect(() => {
     fetchJokes();
@@ -19,6 +20,7 @@ const Joke = () => {
 
   const fetchJokes = () => {
     setIsLoading(true);
+    cardRef.current.checked = false;
     get(child(dbRef, "jokes/"))
       .then((snapshot) => {
         if (snapshot.exists()) {
@@ -30,16 +32,18 @@ const Joke = () => {
         }
       })
       .catch((error) => {
-        console.error(error);
+        alert(error);
       })
-      .finally(() => setIsLoading(false));
+      .finally(() => {
+        setIsLoading(false);
+      });
   };
 
   return (
     <div className={classes.container}>
-      <Card front={joke?.front} back={joke?.back} />
+      <Card ref={cardRef} front={joke?.front} back={joke?.back} />
       <Button onClick={fetchJokes}>Next</Button>
-      {isLoading && <Loading/>}
+      {isLoading && <Loading />}
     </div>
   );
 };
