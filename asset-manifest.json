@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/jokes/static/css/main.48bc3c73.css",
+    "main.js": "/jokes/static/js/main.142bd86b.js",
+    "static/media/spinner.svg": "/jokes/static/media/spinner.a479ee9bc89315fa49964e96a36f1b27.svg",
+    "index.html": "/jokes/index.html",
+    "main.48bc3c73.css.map": "/jokes/static/css/main.48bc3c73.css.map",
+    "main.142bd86b.js.map": "/jokes/static/js/main.142bd86b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.48bc3c73.css",
+    "static/js/main.142bd86b.js"
+  ]
+}
