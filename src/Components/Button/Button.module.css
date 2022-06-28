@@ -1,13 +1,80 @@
-.button {
-    cursor: pointer;
-    border-radius: 10px;
-    background-color: #0277bd;
-    border: 0;
-    color: white;
-    padding: .5rem;
-    font-size: 1rem;
+.btn {
+  font-weight: bold;
+  background: #fff176;
+  box-shadow: 0px 3px #fff176, 0px -3px #fff176, 3px 0px #fff176,
+    -3px 0px #fff176, 0px -6px #ffeb3b, 0px 6px #ffeb3b, 6px 0px #ffeb3b,
+    -6px 0px #ffeb3b, 9px 0px rgb(0 0 0 / 10%), 0px 9px rgb(0 0 0 / 10%);
+  padding: 0.5rem;
+  width: 100px;
+  color: #f9a825;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  position: relative;
+  top: -10px;
 }
 
-.button:focus {
-  outline: none;
+
+
+/* pixel邊緣設定 */
+
+.pixel-top {
+  width: calc(100% + 12px);
+  position: absolute;
+  left: -6px;
+  top: -3px;
+}
+
+.pixel-top::before {
+  left: 3px;
+  background: #ffeb3b;
+  display: block;
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  top: 0;
+}
+
+.pixel-top::after {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  top: 0;
+  right: 3px;
+  background: #ffeb3b;
+}
+
+.pixel-bottom {
+  width: calc(100% + 12px);
+  position: absolute;
+  left: -6px;
+  bottom: 0;
+}
+
+.pixel-bottom::before {
+  left: 3px;
+  top: -3px;
+  background: #e7e7e7;
+  box-shadow: 0px 3px #ffeb3b, 0px 6px rgb(0 0 0 / 10%),
+    -3px 3px rgb(0 0 0 / 10%);
+  display: block;
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 3px;
+}
+
+.pixel-bottom::after {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  right: 3px;
+  top: -3px;
+  background: #e7e7e7;
+  box-shadow: 0px 3px #ffeb3b, 0px 6px rgb(0 0 0 / 10%), 3px 3px rgb(0 0 0 / 10%);
 }

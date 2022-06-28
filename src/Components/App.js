@@ -1,7 +1,6 @@
-import "./App.css";
-import Header from "../Layout/Header/Header";
-import Footer from "../Layout/Footer/Footer";
-import Main from "../Layout/Main/Main";
+import Header from "../layout/Header/Header";
+import Footer from "../layout/Footer/Footer";
+import Main from "../layout/Main/Main";
 import Joke from "./Joke/Joke";
 
 function App() {

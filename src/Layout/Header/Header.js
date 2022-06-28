@@ -1,10 +1,10 @@
 import classes from "./Header.module.css";
-import ClownIcon from "../../Icon/Clown";
+import ClownImg from '../../assets/img/clown.png'
 
 const Header = () => {
   return (
     <header className={classes.header}>
-      <ClownIcon className={classes.logo} />
+      <img src={ClownImg} alt="clown" className={classes.logo}/>
       <h1 className={classes.title}>Jokes, please?</h1>
     </header>
   );
